@@ -14,7 +14,8 @@ from typing import Optional
 import httpx
 
 # ===================== تنظیمات =====================
-BOT_TOKEN = "YOUR_NEW_TOKEN_HERE"   # ← توکن جدید اینجا
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "YOUR_NEW_TOKEN_HERE")
+
 BASE_URL = f"https://tapi.bale.ai/bot{BOT_TOKEN}"
 
 ADMIN_IDS = [123456789]  # ← آیدی عددی ادمین‌ها
